@@ -1,22 +1,43 @@
 import math
+
+#En este subprograma realizaremos la potencia n-esima de un complejo
+#La potencia enésima de número complejo es otro número complejo tal que:
+#Su módulo es la potencia n-ésima del módulo.
+#Su argumento es n veces el argumento dado.
+def potencia(c1,e):
+    #Calculamos el modulo y el argumento del numero complejo
+    mod = modulo(c1)
+    arg = argumento(c1)
+
+    #Aplicamos las formulas
+    mod = mod ** e
+    arg = arg * e
+
+    #Retornamos la potencia
+    return polarACartesiano(round(mod, 0), round(arg, 0))
+    
 #En este subprograma realizaremos la transformacion de un complejo escrito en
 #forma polar a cartesiana
 def polarACartesiano(m,a):
-    print(a)
-    return [math.degrees(math.cos(a)), math.sin(a)]
+    
+    return [m*math.cos(math.radians(a)),
+            m*math.sin(math.radians(a))]
+
 #En este subprograma realizaremos la transformacion de un complejo escrito en
 #forma cartesiana a polar
 def cartesianoAPolar(c1):
-    #Definimos la parte reale e imaginaria
 
-    r1 = c1[0]
-    i1 = c1[1]
+    return [modulo(c1),argumento(c1)]
 
-    return [round(modulo(c1), 2),round(math.degrees(math.atan(i1/r1)), 2)]
+#En este subprograma realizaremos la impresion de un numero complejo en
+#forma : |c| * e**(i * α)
+def impresionExponencial(c1):
+    
+    print(str(round(modulo(c1),2))+' * e **(i'+str(round(argumento(c1),2)))
     
 #En este subprograma realizaremos la impresion de un numero complejo en
 #forma : a + b*i
-def impresion(c1):
+def impresionBinomica(c1):
     #Definimos la parte reale e imaginaria
 
     r1 = c1[0]
@@ -26,10 +47,20 @@ def impresion(c1):
     #impresion
     
     if i1 > 0:
-        print(str(r1)+" +"+str(i1)+"i")
+        print(str(r1)+"+"+str(i1)+"i")
         
     else:
-        print(str(r1)+" "+str(i1)+"i")
+        print(str(r1)+""+str(i1)+"i")
+        
+#En este subprograma realizaremos el argumento de un numero compejo
+def argumento(c1):
+    #Definimos la parte real e imaginaria
+
+    r1 = c1[0]
+    i1 = c1[1]
+
+    return math.degrees(math.atan(i1/r1))
+    
 #En este subprograma realizaremos el modulo de un numero complejo
 def modulo(c1):
     #Definimos la parte real e imaginaria
@@ -37,7 +68,7 @@ def modulo(c1):
     r1 = c1[0]
     i1 = c1[1]
     
-    return round(((r1**2)+(i1**2))**(1/2), 2)
+    return ((r1**2)+(i1**2))**(1/2)
 
 #En este subprograma realizaremos el conjugador de un numero complejo
 def conjugado(c1):
@@ -164,7 +195,7 @@ def suma(c1, c2):
 #y llamamos el metodo correspondiete a la operacion a ejecutar.
 def main():
     
-    complejo1 = [15,2]
+    complejo1 = [1,1]
     complejo2 = [3,2]
     modulo = 3.605551275463989 # 3+2i
     argumento = 33.690067525979785 # 3+2i
@@ -174,8 +205,10 @@ def main():
     # division(complejo1, complejo2)
     # conjugado (complejo1)
     # modulo(complejo1)
-    # impresion(complejo2)
+    # impresionBinomica(complejo2)
+    # impresionExponencial(complejo2)
     # cartesianoAPolar(complejo2)
-    print(polarACartesiano(modulo, argumento))
+    # polarACartesiano(modulo, argumento)
+    print(potencia(complejo1, 10))
     
 main()
