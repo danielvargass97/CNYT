@@ -1,7 +1,5 @@
 import math
 
-'En este subprograma realizaremos la potencia n-esima de un complejo'
-
 def potencia(c1,e):
     '''La potencia enésima de número complejo es otro número complejo tal que:
     Su módulo es la potencia n-ésima del módulo.
@@ -10,90 +8,98 @@ def potencia(c1,e):
     mod = modulo(c1)
     arg = argumento(c1)
 
-    'Aplicamos las formulas'
     mod = mod ** e
     arg = arg * e
 
-    'Retornamos la potencia'
-
     return polarACartesiano(mod, arg)
     
-#En este subprograma realizaremos la transformacion de un complejo escrito en
-#forma polar a cartesiana
+
 def polarACartesiano(m,a):
+    '''La conversion de un numero complejo escrito en forma polar a forma cartesiana
+    a+bi. Para realizar esta operacion ingresa el modulo (m) y el argumento (a)
+    como parametro. Entonces tenemos que:
+    a = m * cos(a) y
+    b = m * sen(a)
+    El argumento debe estar en radianes
+    '''
     
     return [round(m*math.cos(math.radians(a)), 2),
             round(m*math.sin(math.radians(a)), 2)]
 
-#En este subprograma realizaremos la transformacion de un complejo escrito en
-#forma cartesiana a polar
-def cartesianoAPolar(c1):
 
+def cartesianoAPolar(c1):
+    '''La conversion de un numero complejo escrito en forma cartesiana a polar.
+    Para realizar esta operacion ingresa el numero complejo. Calculamos su
+    modulo y argumento.'''
     return [modulo(c1),argumento(c1)]
 
-#En este subprograma realizaremos la impresion de un numero complejo en
-#forma : |c| * e**(i * α)
+
 def impresionExponencial(c1):
+    '''Realizamos la impresion de un numero complejo en
+    forma : |c| * e**(i * α)'''
     
     print(str(round(modulo(c1),2))+' * e **(i'+str(round(argumento(c1),2)))
     
-#En este subprograma realizaremos la impresion de un numero complejo en
-#forma : a + b*i
+
 def impresionBinomica(c1):
-    #Definimos la parte reale e imaginaria
+    '''Realizamos la impresion de un numero complejo en
+    forma : a + b*i'''
 
     r1 = c1[0]
     i1 = c1[1]
 
-    #Revisaremos que signo tiene el numero imaginario para hacer correcta la
-    #impresion
-    
     if i1 > 0:
         print(str(r1)+"+"+str(i1)+"i")
         
     else:
         print(str(r1)+""+str(i1)+"i")
         
-#En este subprograma realizaremos el argumento de un numero compejo
+
 def argumento(c1):
-    #Definimos la parte real e imaginaria
+    '''El argumento de un numero compejo α es un numero real tal que:
+    α = tan-1(b/a)'''
 
     r1 = c1[0]
     i1 = c1[1]
 
     return math.degrees(math.atan(i1/r1))
     
-#En este subprograma realizaremos el modulo de un numero complejo
-def modulo(c1):
-    #Definimos la parte real e imaginaria
 
+def modulo(c1):
+    '''El argumento de un numero compejo |z| es un numero real tal que:
+    |z| = [(a**2)+(b**2)]**0.5 '''
+   
     r1 = c1[0]
     i1 = c1[1]
     
     return ((r1**2)+(i1**2))**(1/2)
 
-#En este subprograma realizaremos el conjugador de un numero complejo
+
 def conjugado(c1):
-    #Definimos la parte real e imaginaria
+    '''El conjugado de un número complejo z es el número complejo que se obtiene
+    por simetría del dado respecto del eje de abscisas.
+    Representando el número complejo a + bi  y haciendo la correspondiente
+    simetría, se tiene que su conjugado es a - bi '''
 
     r1 = c1[0]
     i1 = c1[1]
 
     return [r1,-i1]
 
-#En este subprograma realizaremos la division de dos numeros complejos.
+
 def division(c1, c2):
-    #Definimos las partes reales de los nuemeros.
+    '''La division dos complejos la realizamos multiplicando el numerador y el
+    denominador por el conjugado del denominador, así el denominador pasará a
+    ser un número real.
+    Finalmente se separan la parte real y la parte imaginaria. '''
 
     r1 = c1[0]
     r2 = c2[0]
-
-    #Definimos las partes imaginarias de los numeros.
-
+    
     i1 = c1[1]
     i2 = c2[1]
 
-    #Revisamos que no estemos dividiendo por cero (0).
+    #Revisar que no estemos dividiendo por cero (0).
 
     if r2 == 0 and i2 == 0:
         return None
@@ -114,10 +120,6 @@ def division(c1, c2):
         i3 = i2/r2
         return [r3, i3]
     
-    #Si ninguno es cero, multiplicamos al numerador y al denominador por la
-    #conjugada del denominador, despues realizamos la division normal, ya que
-    #estaremos dividiendo por un real
-    
     else:
         z = conjugado(c2)
         numerador = producto(c1, z)
@@ -126,21 +128,15 @@ def division(c1, c2):
                 round(numerador[1]/denominador[0],2)]
         
         
-#En este subprograma realizaremos el producto de dos numeros complejos.
 def producto(c1, c2):
-    #Definimos las partes reales de los nuemeros.
+    '''La multiplicacion de dos complejos la realizamos de manera distributiva.
+    Sumamos reales con reales e imaginarios con imaginarios.'''
 
     r1 = c1[0]
     r2 = c2[0]
 
-    #Definimos las partes imaginarias de los numeros.
-
     i1 = c1[1]
     i2 = c2[1]
-    
-
-    #Realizamos el producto de manera distributiva, guardaremos los resultados
-    #teniendo en cuenta si son reales o imaginarios.
 
     r3 = r1 * r2
     r4 = i1 * i2
@@ -151,48 +147,39 @@ def producto(c1, c2):
     #Multiplicamos r4 por (-1) ya que este resultado siempre nos dara un i**2
 
     r4 = r4 * (-1)
-
-    #Retornamos el resultado, que es la suma de los resultados obtenidos en el
-    #paso anterior.
-
+    
     return [r3+r4, i3+i4]
     
-#En este subprograma realizaremos la resta de dos numeros complejos.
+
 def resta(c1, c2):
-    #Definimos las partes reales de los nuemeros.
+    '''La resta de dos complejos la realizamos de la misma forma que una resta
+    de dos numeros reales. Restamos reales con reales e imaginarios con
+    imaginarios.'''
 
     r1 = c1[0]
     r2 = c2[0]
 
-    #Definimos las partes imaginarias de los numeros.
-
     i1 = c1[1]
     i2 = c2[1]
-
-    #Retornaremos la resta, restamos parte real con parte real y parte
-    # imaginaria con parte imaginaria.
 
     return [r1-r2, i1-i2]
 
 
-#En este subprograma realizaremos la suma de dos numeros complejos.
+
 def suma(c1, c2):
-    #Definimos las partes reales de los numeros.
+    '''La suma de dos complejos la realizamos de la misma forma que una sma
+    de dos numeros reales. Sumamos reales con reales e imaginarios con
+    imaginarios.'''
 
     r1 = c1[0]
     r2 = c2[0]
 
-    #Definimos las partes imaginarias de los numeros.
-
     i1 = c1[1]
     i2 = c2[1]
 
-    #Retornamos la suma, sumamos parte real con parte real y pare imaginaria
-    #con parte imaginaria.
-    
     return [r1+r2, i1+i2]
 
-
+'''
 #En el main del programa definimos los numeros complejos que utilizaremos
 #y llamamos el metodo correspondiete a la operacion a ejecutar.
 def main():
@@ -211,6 +198,7 @@ def main():
     # impresionExponencial(complejo2)
     # cartesianoAPolar(complejo1)
     # polarACartesiano(modulo, argumento)
-    print(potencia(complejo1, 10))
+    # potencia(complejo1, 10)
     
 main()
+'''

@@ -25,25 +25,41 @@
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-argumento"><strong>argumento</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;el&nbsp;argumento&nbsp;de&nbsp;un&nbsp;numero&nbsp;compejo</tt></dd></dl>
- <dl><dt><a name="-cartesianoAPolar"><strong>cartesianoAPolar</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;transformacion&nbsp;de&nbsp;un&nbsp;complejo&nbsp;escrito&nbsp;en<br>
-#forma&nbsp;cartesiana&nbsp;a&nbsp;polar</tt></dd></dl>
- <dl><dt><a name="-conjugado"><strong>conjugado</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;el&nbsp;conjugador&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo</tt></dd></dl>
- <dl><dt><a name="-division"><strong>division</strong></a>(c1, c2)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;division&nbsp;de&nbsp;dos&nbsp;numeros&nbsp;complejos.</tt></dd></dl>
- <dl><dt><a name="-impresionBinomica"><strong>impresionBinomica</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;impresion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;en<br>
-#forma&nbsp;:&nbsp;a&nbsp;+&nbsp;b*i</tt></dd></dl>
- <dl><dt><a name="-impresionExponencial"><strong>impresionExponencial</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;impresion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;en<br>
-#forma&nbsp;:&nbsp;|c|&nbsp;*&nbsp;e**(i&nbsp;*&nbsp;α)</tt></dd></dl>
- <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>#En&nbsp;el&nbsp;main&nbsp;del&nbsp;programa&nbsp;definimos&nbsp;los&nbsp;numeros&nbsp;complejos&nbsp;que&nbsp;utilizaremos<br>
-#y&nbsp;llamamos&nbsp;el&nbsp;metodo&nbsp;correspondiete&nbsp;a&nbsp;la&nbsp;operacion&nbsp;a&nbsp;ejecutar.</tt></dd></dl>
- <dl><dt><a name="-modulo"><strong>modulo</strong></a>(c1)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;el&nbsp;modulo&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo</tt></dd></dl>
- <dl><dt><a name="-polarACartesiano"><strong>polarACartesiano</strong></a>(m, a)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;transformacion&nbsp;de&nbsp;un&nbsp;complejo&nbsp;escrito&nbsp;en<br>
-#forma&nbsp;polar&nbsp;a&nbsp;cartesiana</tt></dd></dl>
+<td width="100%"><dl><dt><a name="-argumento"><strong>argumento</strong></a>(c1)</dt><dd><tt>El&nbsp;argumento&nbsp;de&nbsp;un&nbsp;numero&nbsp;compejo&nbsp;α&nbsp;es&nbsp;un&nbsp;numero&nbsp;real&nbsp;tal&nbsp;que:<br>
+α&nbsp;=&nbsp;tan-1(b/a)</tt></dd></dl>
+ <dl><dt><a name="-cartesianoAPolar"><strong>cartesianoAPolar</strong></a>(c1)</dt><dd><tt>La&nbsp;conversion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;escrito&nbsp;en&nbsp;forma&nbsp;cartesiana&nbsp;a&nbsp;polar.<br>
+Para&nbsp;realizar&nbsp;esta&nbsp;operacion&nbsp;ingresa&nbsp;el&nbsp;numero&nbsp;complejo.&nbsp;Calculamos&nbsp;su<br>
+modulo&nbsp;y&nbsp;argumento.</tt></dd></dl>
+ <dl><dt><a name="-conjugado"><strong>conjugado</strong></a>(c1)</dt><dd><tt>El&nbsp;conjugado&nbsp;de&nbsp;un&nbsp;número&nbsp;complejo&nbsp;z&nbsp;es&nbsp;el&nbsp;número&nbsp;complejo&nbsp;que&nbsp;se&nbsp;obtiene<br>
+por&nbsp;simetría&nbsp;del&nbsp;dado&nbsp;respecto&nbsp;del&nbsp;eje&nbsp;de&nbsp;abscisas.<br>
+Representando&nbsp;el&nbsp;número&nbsp;complejo&nbsp;a&nbsp;+&nbsp;bi&nbsp;&nbsp;y&nbsp;haciendo&nbsp;la&nbsp;correspondiente<br>
+simetría,&nbsp;se&nbsp;tiene&nbsp;que&nbsp;su&nbsp;conjugado&nbsp;es&nbsp;a&nbsp;-&nbsp;bi</tt></dd></dl>
+ <dl><dt><a name="-division"><strong>division</strong></a>(c1, c2)</dt><dd><tt>La&nbsp;division&nbsp;dos&nbsp;complejos&nbsp;la&nbsp;realizamos&nbsp;multiplicando&nbsp;el&nbsp;numerador&nbsp;y&nbsp;el<br>
+denominador&nbsp;por&nbsp;el&nbsp;conjugado&nbsp;del&nbsp;denominador,&nbsp;así&nbsp;el&nbsp;denominador&nbsp;pasará&nbsp;a<br>
+ser&nbsp;un&nbsp;número&nbsp;real.<br>
+Finalmente&nbsp;se&nbsp;separan&nbsp;la&nbsp;parte&nbsp;real&nbsp;y&nbsp;la&nbsp;parte&nbsp;imaginaria.</tt></dd></dl>
+ <dl><dt><a name="-impresionBinomica"><strong>impresionBinomica</strong></a>(c1)</dt><dd><tt>Realizamos&nbsp;la&nbsp;impresion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;en<br>
+forma&nbsp;:&nbsp;a&nbsp;+&nbsp;b*i</tt></dd></dl>
+ <dl><dt><a name="-impresionExponencial"><strong>impresionExponencial</strong></a>(c1)</dt><dd><tt>Realizamos&nbsp;la&nbsp;impresion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;en<br>
+forma&nbsp;:&nbsp;|c|&nbsp;*&nbsp;e**(i&nbsp;*&nbsp;α)</tt></dd></dl>
+ <dl><dt><a name="-modulo"><strong>modulo</strong></a>(c1)</dt><dd><tt>El&nbsp;argumento&nbsp;de&nbsp;un&nbsp;numero&nbsp;compejo&nbsp;|z|&nbsp;es&nbsp;un&nbsp;numero&nbsp;real&nbsp;tal&nbsp;que:<br>
+|z|&nbsp;=&nbsp;[(a**2)+(b**2)]**0.5</tt></dd></dl>
+ <dl><dt><a name="-polarACartesiano"><strong>polarACartesiano</strong></a>(m, a)</dt><dd><tt>La&nbsp;conversion&nbsp;de&nbsp;un&nbsp;numero&nbsp;complejo&nbsp;escrito&nbsp;en&nbsp;forma&nbsp;polar&nbsp;a&nbsp;forma&nbsp;cartesiana<br>
+a+bi.&nbsp;Para&nbsp;realizar&nbsp;esta&nbsp;operacion&nbsp;ingresa&nbsp;el&nbsp;modulo&nbsp;(m)&nbsp;y&nbsp;el&nbsp;argumento&nbsp;(a)<br>
+como&nbsp;parametro.&nbsp;Entonces&nbsp;tenemos&nbsp;que:<br>
+a&nbsp;=&nbsp;m&nbsp;*&nbsp;cos(a)&nbsp;y<br>
+b&nbsp;=&nbsp;m&nbsp;*&nbsp;sen(a)<br>
+El&nbsp;argumento&nbsp;debe&nbsp;estar&nbsp;en&nbsp;radianes</tt></dd></dl>
  <dl><dt><a name="-potencia"><strong>potencia</strong></a>(c1, e)</dt><dd><tt>La&nbsp;potencia&nbsp;enésima&nbsp;de&nbsp;número&nbsp;complejo&nbsp;es&nbsp;otro&nbsp;número&nbsp;complejo&nbsp;tal&nbsp;que:<br>
 Su&nbsp;módulo&nbsp;es&nbsp;la&nbsp;potencia&nbsp;n-ésima&nbsp;del&nbsp;módulo.<br>
 Su&nbsp;argumento&nbsp;es&nbsp;n&nbsp;veces&nbsp;el&nbsp;argumento&nbsp;dado.</tt></dd></dl>
- <dl><dt><a name="-producto"><strong>producto</strong></a>(c1, c2)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;el&nbsp;producto&nbsp;de&nbsp;dos&nbsp;numeros&nbsp;complejos.</tt></dd></dl>
- <dl><dt><a name="-resta"><strong>resta</strong></a>(c1, c2)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;resta&nbsp;de&nbsp;dos&nbsp;numeros&nbsp;complejos.</tt></dd></dl>
- <dl><dt><a name="-suma"><strong>suma</strong></a>(c1, c2)</dt><dd><tt>#En&nbsp;este&nbsp;subprograma&nbsp;realizaremos&nbsp;la&nbsp;suma&nbsp;de&nbsp;dos&nbsp;numeros&nbsp;complejos.</tt></dd></dl>
+ <dl><dt><a name="-producto"><strong>producto</strong></a>(c1, c2)</dt><dd><tt>La&nbsp;multiplicacion&nbsp;de&nbsp;dos&nbsp;complejos&nbsp;la&nbsp;realizamos&nbsp;de&nbsp;manera&nbsp;distributiva.<br>
+Sumamos&nbsp;reales&nbsp;con&nbsp;reales&nbsp;e&nbsp;imaginarios&nbsp;con&nbsp;imaginarios.</tt></dd></dl>
+ <dl><dt><a name="-resta"><strong>resta</strong></a>(c1, c2)</dt><dd><tt>La&nbsp;resta&nbsp;de&nbsp;dos&nbsp;complejos&nbsp;la&nbsp;realizamos&nbsp;de&nbsp;la&nbsp;misma&nbsp;forma&nbsp;que&nbsp;una&nbsp;resta<br>
+de&nbsp;dos&nbsp;numeros&nbsp;reales.&nbsp;Restamos&nbsp;reales&nbsp;con&nbsp;reales&nbsp;e&nbsp;imaginarios&nbsp;con<br>
+imaginarios.</tt></dd></dl>
+ <dl><dt><a name="-suma"><strong>suma</strong></a>(c1, c2)</dt><dd><tt>La&nbsp;suma&nbsp;de&nbsp;dos&nbsp;complejos&nbsp;la&nbsp;realizamos&nbsp;de&nbsp;la&nbsp;misma&nbsp;forma&nbsp;que&nbsp;una&nbsp;sma<br>
+de&nbsp;dos&nbsp;numeros&nbsp;reales.&nbsp;Sumamos&nbsp;reales&nbsp;con&nbsp;reales&nbsp;e&nbsp;imaginarios&nbsp;con<br>
+imaginarios.</tt></dd></dl>
 </td></tr></table>
 </body></html>
