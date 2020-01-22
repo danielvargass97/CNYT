@@ -1,27 +1,29 @@
 import math
 
-#En este subprograma realizaremos la potencia n-esima de un complejo
-#La potencia enésima de número complejo es otro número complejo tal que:
-#Su módulo es la potencia n-ésima del módulo.
-#Su argumento es n veces el argumento dado.
+'En este subprograma realizaremos la potencia n-esima de un complejo'
+
 def potencia(c1,e):
-    #Calculamos el modulo y el argumento del numero complejo
+    '''La potencia enésima de número complejo es otro número complejo tal que:
+    Su módulo es la potencia n-ésima del módulo.
+    Su argumento es n veces el argumento dado.'''
+    
     mod = modulo(c1)
     arg = argumento(c1)
 
-    #Aplicamos las formulas
+    'Aplicamos las formulas'
     mod = mod ** e
     arg = arg * e
 
-    #Retornamos la potencia
-    return polarACartesiano(round(mod, 0), round(arg, 0))
+    'Retornamos la potencia'
+
+    return polarACartesiano(mod, arg)
     
 #En este subprograma realizaremos la transformacion de un complejo escrito en
 #forma polar a cartesiana
 def polarACartesiano(m,a):
     
-    return [m*math.cos(math.radians(a)),
-            m*math.sin(math.radians(a))]
+    return [round(m*math.cos(math.radians(a)), 2),
+            round(m*math.sin(math.radians(a)), 2)]
 
 #En este subprograma realizaremos la transformacion de un complejo escrito en
 #forma cartesiana a polar
@@ -197,8 +199,8 @@ def main():
     
     complejo1 = [1,1]
     complejo2 = [3,2]
-    modulo = 3.605551275463989 # 3+2i
-    argumento = 33.690067525979785 # 3+2i
+    modulo = 1.414213562370951 # 1+i
+    argumento = 45.0 # 1+i
     # suma(complejo1, complejo2)
     # resta(complejo1, complejo2)
     # producto(complejo1, complejo2)
@@ -207,7 +209,7 @@ def main():
     # modulo(complejo1)
     # impresionBinomica(complejo2)
     # impresionExponencial(complejo2)
-    # cartesianoAPolar(complejo2)
+    # cartesianoAPolar(complejo1)
     # polarACartesiano(modulo, argumento)
     print(potencia(complejo1, 10))
     
