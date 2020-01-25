@@ -9,8 +9,7 @@
   
      ![image](https://user-images.githubusercontent.com/50029247/73123881-e506e280-3f62-11ea-89f3-a4eb501e8114.png)
   *  **Funcion resta:** Realiza la resta de dos numeros complejos
-  
-      `(a + bi) - (c + di) = (a + c) - (b + d)i`
+     
   
   
       
