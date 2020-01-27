@@ -1,5 +1,6 @@
 import math
 
+'''Se trabajara un complejo a+bi en la lista [a,b]'''
 def potencia(c1,e):
     '''La potencia enésima de número complejo es otro número complejo tal que:
     Su módulo es la potencia n-ésima del módulo.
