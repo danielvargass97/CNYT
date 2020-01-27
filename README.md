@@ -39,8 +39,18 @@
   * **Potencia n de un complejo:** Realiza la potencia de un numero complejo
  
   ![potenciaNcomplejo](https://user-images.githubusercontent.com/50029247/73187908-1f51ba80-40f0-11ea-9f3b-b2db475fcf24.png)
-* Pruebas
-* A quien interese
+* **Pruebas:** Entregamos soportes de algunas funciones con el procedimiento realizado en una calculadora de complejos
+  
+  * ![testSuma](https://user-images.githubusercontent.com/50029247/73192017-73f83400-40f6-11ea-8648-7f89da5cdf29.png)
+  
+  * ![testResta](https://user-images.githubusercontent.com/50029247/73192110-98eca700-40f6-11ea-9077-f9d348786559.png)
+  
+  * ![testMultiplicacion](https://user-images.githubusercontent.com/50029247/73192240-bd488380-40f6-11ea-9f4d-f214e55191cb.png)
+  
+  * ![testdivision](https://user-images.githubusercontent.com/50029247/73192339-e537e700-40f6-11ea-9ee3-a3eaf15342fd.png)
+  
+  * ![testprueba](https://user-images.githubusercontent.com/50029247/73192868-b4a47d00-40f7-11ea-8ac1-0f42e444f939.png)
+
 
 
 
