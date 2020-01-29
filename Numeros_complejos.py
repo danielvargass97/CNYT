@@ -63,7 +63,7 @@ def argumento(c1):
     r1 = c1[0]
     i1 = c1[1]
 
-    return math.degrees(math.atan(i1/r1))
+    return math.degrees(math.atan2(i1,r1))
     
 
 def modulo(c1):
@@ -203,3 +203,5 @@ def main():
     
 main()
 '''
+
+      
